@@ -47,10 +47,11 @@ function showAddedResult(){
     if(suscribe.checked == true){
         suscribeCheck = 'Yes';
     }
-
+    
+    var del = '<button onclick = editRow(this)>Edit</button><br><button onclick = deleterow(this)>Delete</button>'
     //array for data insert
     var dataarr = new Array();
-    dataarr = [firstName,middleName,lastName,email,genderValue,phone1,phone2,address, city, stateList, countryList, zip, suscribeCheck];
+    dataarr = [firstName,middleName,lastName,email,genderValue,phone1,phone2,address, city, stateList, countryList, zip, suscribeCheck,del];
     //form validation
 
     //First name validation
