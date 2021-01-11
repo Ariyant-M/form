@@ -10,7 +10,6 @@ function editRow(em){
     cells.forEach(cell => {
     cell.addEventListener('click', () =>
         console.log("Row index: " + cell.closest('tr').rowIndex + " | Column index: " + cell.cellIndex));
-        var rowID = em.closest('tr').rowIndex;
         if(document.querySelector("#tableData > thead > tr:nth-child("+(cell.closest('tr').rowIndex + 1)+") > td:nth-child(14) > button:nth-child(1)").innerHTML == "Save"){
             cell.contentEditable = true;
             if(cell.cellIndex == 13){
