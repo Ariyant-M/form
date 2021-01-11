@@ -20,7 +20,7 @@ function showAddedResult(){
     var genderValue = '';
     var suscribeCheck = 'No';
     var regName = /^[a-zA-Z ]{2,30}$/;
-    var regEmail = /^[a-zA-Z0-9_.]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-]+$/i;
+    var regEmail = /^[a-zA-Z0-9_.]+@[a-zA-Z0-9-.]+.[a-zA-Z0-9-.]+$/i;
     var regPhone = /^[0-9]{10}$/;
     var emptyField = "Field required";
     var errorStatus = 0;
