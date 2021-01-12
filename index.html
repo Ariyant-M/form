@@ -4,166 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+    
+    <!-- CSS links -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="http://localhost/form/CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/ee6f18f199.js" crossorigin="anonymous"></script>
     <script src="http://localhost/form/JavaScript/countries.js"></script>
 </head>
 <body class="alterBody">
-    <div class="mainForm" id="mainForm">
-        <h1 class="heading">Registration Form</h1>
-        <form action="" id="detailsForm" name="myForm">
-            <div class="leftSideForm">
-                <label for="firstName">First Name <span>*</span> </label>
-                <input type="text" name="firstName" id="firstName" placeholder="First Name"  >
-                <br>
-                <div class="inputError" id="errorFName"></div>
-                <br>
-
-                <label for="lastName">Last Name<span>*</span></label>
-                <input type="text" name="lastName" id="lastName" placeholder="Last Name" >
-                <br>
-                <div class="inputError" id="errorLName"></div>
-                <br>
-
-                <label for="pass">Password<span>*</span></label>
-                <input type="password" name="pass" id="pass" >
-                <br>
-                <small>length must be more then 5</small>
-                <div class="inputError" id="errorPass"></div>
-                <br>
-                <br>
-                
-            </div>
-            <div class="rightSideForm">
-                <label for="middleName">Middle Name </label>
-                <input type="text" name="middleName" id="middleName" placeholder="Middle Name">
-                <br>
-                <div class="inputError" id="errorMidName"></div>
-                <br>
-
-                <label for="email">Email<span>*</span></label>
-                <input type="email" name="email" id="email" placeholder="abc@exemple.com" >
-                <br>
-                <div class="inputError" id="errorEmail"></div>
-                <br>
-
-                <label for="conpass">Confirm Password<span>*</span></label>
-                <input type="password" name="conpass" id="conpass" >
-                <br>
-                <div class="inputError" id="errorConPass"></div>
-                <br>
-
-                
-            </div>
-            <div class="mid" id="rem">
-                
-                <label for="gender">Gender <span>*</span></label>
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label>
-                <input type="radio" id="other" name="gender" value="other">
-                <label for="other">Other</label>
-                <br>
-                <div class="inputError" id="errorGender"></div>
-                <br>
-            </div>
-                
-            <div class="leftSideForm">
-                <label for="phone1">Phone no.<span>*</span></label>
-                <input type="tel" name="phone1" id="phone1" pattern="[0-9]{10}" placeholder="9876543210" >
-                <br>
-                <div class="inputError" id="errorPhone1"></div>
-                <br>
-
-                <label for="address1">Address1<span>*</span></label>
-                <input type="text" name="address1" id="address1" >
-                <br>
-                <div class="inputError" id="errorAddress"></div>
-                <br>
-
-                <label for="city">City<span>*</span></label>
-                <input type="text" name="city" id="city" >
-                <br>
-                <div class="inputError" id="errorCity"></div>
-                <br>
-                
-                <label for="country">Country<span>*</span></label>
-                <select id="country" name ="country"></select>
-                <br>
-                <div class="inputError" id="errorCountry"></div>
-                <br>
-
-            </div>
-            <div class="rightSideForm">
-                <label for="phone2">Phone no(2) </label>
-                <input type="tel" name="phone2" id="phone2" placeholder="9876543210">
-                <br>
-                <div class="inputError" id="errorPhone2"></div>
-                <br>
-
-                <label for="address2">Address2 </label>
-                <input type="text" name="address2" id="address2" >
+    <div class="container" id="mainForm">
+        <br><br>
+        <div class="row">
+            <!-- form -->
+            <div class="leftSide col" id="leftSide">
+                <div class="center">
+                    <h1 class="heading">Form</h1>
+                </div>
                 <br><br>
+                <form action="" id="detailsForm" name="myForm"></form>
+                    <div class="form-group">
+                        <label for="firstName">First Name <span>*</span></label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name"data-placement="right" data-trigger="manual" data-content="Must only contain letters and more the one character.">
+                    </div>
 
-                <label for="zip">Zip Code<span>*</span></label>
-                <input type="text" name="zip" id="zip">
-                <br>
-                <div class="inputError" id="errorZip"></div>
-                <br>
+                    <div class="form-group">
+                        <label for="lastName">Last Name <span>*</span></label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
+                    </div>
 
-                <label for="state">State<span>*</span></label>
-                <select name ="state" id ="state"></select>
-                <br>
-                <div class="inputError" id="errorState"></div>
-                <br>
-
-            </div>
-            <div class="suscribe">
-                <label  for="subscribe">Subscribe news letter?</label>
-                <input type="checkbox" name="subscribe" id="subscribe" value="Yes" checked>
-                <br><br>
-                <input type="button" onclick="showAddedResult()" value="Submit" id="submitBtn">
-            </div>
-        </form>
-    </div>
-    <div id="showResult">
-        <div id="showResultCenter">
-            <i class="fa fa-arrow-left fa-3px" aria-hidden="true"></i>
-        </div>  
-    </div>
-    <div class="tableContainer" id="tableContainer">
-        <div class="recordTable" id="recordTable">
-            <table class="tableData" id="tableData">
-                <thead>
-                    <tr>
-                        <th>First Name</th>
-                        <th>Middle Name</th>
-                        <th>Last Name</th>
-                        <th>Email ID</th>
-                        <th>Gender</th>
-                        <th>Phone1</th>
-                        <th>phone2</th>
-                        <th>Address</th>
-                        <th>city</th>
-                        <th>state</th>
-                        <th>counthy</th>
-                        <th>zip code</th>
-                        <th>Subscription</th>
-                        <th>Alter</th>
-                    </tr>
-                </thead>
-                <tbody>
+                    <div class="form-group">
+                        <label for="email">Email address <span>*</span></label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="abc@exemple.com">
+                    </div>
                     
-                </tbody>
-            </table>
-            
-        </div>
+                    <div class="form-group">
+                        <label for="pass">Password</label>
+                        <input type="password" class="form-control" name="pass" id="pass">
+                        <small>length must be more then 5</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="conpass">Confirm Password</label>
+                        <input type="password" class="form-control" name="conpass" id="conpass">
+                    </div>
+
+                    <div>
+                        <label for="gender">Gender <span>*</span></label>
+                        <br>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" type="radio" name="gender" id="male" value="male" checked>
+                            <label class="custom-control-label" for="male">
+                                Male
+                            </label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" type="radio" name="gender" id="female" value="female">
+                            <label class="custom-control-label" for="female">
+                                Female
+                            </label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" type="radio" name="gender" id="other" value="other">
+                            <label class="custom-control-label" for="other">
+                                Other
+                            </label>
+                        </div>
+                        <br><br>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="phone1">Phone Number(1)<span>*</span></label>
+                        <input type="tel" class="form-control" name="phone1" id="phone1" pattern="[0-9]{10}" placeholder="9876543210">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone2">Phone Number(2)</label>
+                        <input type="tel" class="form-control" name="phone2" id="phone2" pattern="[0-9]{10}" placeholder="9876543210">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address<span>*</span></label>
+                        <input type="text" class="form-control" name="address1" id="address1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">City<span>*</span></label>
+                        <input type="text" class="form-control" name="city" id="city">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="zip">Zip<span>*</span></label>
+                        <input type="text" class="form-control" name="zip" id="zip">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country<span>*</span></label>
+                        <select class="custom-select" id="country" name ="country">
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">State<span>*</span></label>
+                        <select class="custom-select" name ="state" id ="state">
+
+                        </select>
+                    </div>
+
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" name="subscribe" id="subscribe" value="Yes" checked style="width: 15px;">
+                        <label class="form-check-label" for="subscribe">Subscribe news letter?</label>
+                    </div>
+
+                    <div class="center">
+                        <input type="button" onclick="showAddedResult()" class="btn" value="Submit" id="submitBtn">
+                    </div>
+                    
+                </form>
+            </div>
         
-        <span id="close">X</span>
-        
+            <!-- table -->
+            <div class="rightSide col center" id="rightSide">
+                <div class="center">
+                    <h1 class="heading">Data</h1>
+                </div>
+                
+                <br><br>
+                <table class="table table-hover table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Alter</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div> 
     </div>
+    
     <script src="http://localhost/form/JavaScript/EditByButton.js"></script>
     <script src="http://localhost/form/JavaScript/main.js"></script>
     <script language="javascript">

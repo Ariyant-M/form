@@ -1,30 +1,26 @@
 .alterBody{
-    background-image: linear-gradient(to right,#0f0c29,#302b63,#24243e);
-    background-repeat: no-repeat;
+    background-color: #2BAE66FF;
 
 }
-.btn-danger{
-    background-color: red;
-    height: 20px;
-    width: 40px;
-    border-radius: 2px;
-    color: white;
+.btn{
+    width: 450px;
 }
-.btn-primary{
-    background-color: rgb(20, 181, 245);
-    height: 20px;
-    width: 40px;
-    border-radius: 2px;
-    color: white;
+.custom-select{
+    width: 450px !important;
+    background-color: #2BAE66FF;
 }
-#DelButton{
-    float: left;
-    margin-right: 40px;
-    height: 50px;
-    width: 80px;
+
+.center{
+    text-align: center;
+}
+.custom-select,
+.form-control:focus {   
+  border-color: #2BAE66FF !important;
+  box-shadow: 0 1px 1px rgb(0, 37, 17,0.075) inset, 0 0 8px rgb(47, 187, 110,0.5) !important;
+  outline: 0 none;
 }
 .heading{
-    color: #050505;
+    color: rgb(1, 27, 16);
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     line-height: 30px;
@@ -32,14 +28,9 @@
 }
 input{
     font-family: 'Nunito', sans-serif;
-    outline: none;
-    height: 25px;
-    border-width: 0 0 2px;
-    border-color: #7248BC;
+    
 }
-input:focus {
-    border-color: green
-}
+
 .inputError{
     color: rgb(255, 0, 0);
     margin: 5px 20px;
@@ -51,57 +42,39 @@ input:focus {
 input[type="radio"] {
     margin-right: 0;
 }
+input.radio { 
+    display: inline; 
+}
 label{
     font-family: 'Merriweather', serif;
     font-size: 20px;
     text-align: left;
 }
-.leftSideForm{
-    width: 40%;
+.leftSide{
     float: left;
     text-align: left;
-    margin-left: 40px;
+    display: block;
+    margin-left: 10px;
+    box-shadow: 0 1px 1px rgb(0, 37, 17,0.075) inset, 0 0 8px rgb(47, 187, 110,0.5);
+    border-radius: 15px;
+    padding: 15px;
 }
-.leftSideForm input{
-    width: 250px;
+
+.leftSide input{
+    width: 450px;
 }
-.leftSideForm label{
+.leftSide label{
     display: inline-block;
     width: 40%;
 }
-.mainForm{
-    width: 95%;
-    background-color: white;
-    border-radius: 5px;
+.container{
+    background-color: #FCF6F5FF;
+    border-radius: 10px;
     text-align: center;
-    padding: 20px 0px;
-    float: left;  
-    margin-left: 30px; 
-    margin-top: 40px;
+    color: #101820FF;
+    margin-top: 60px;
 }
-.mid{
-    clear: both;
-    text-align: left;
-    margin-left: 40px;
-    width: 100%;
-}
-.mid label{
-    width: 20%;
-    display: inline-block;
-}
-.rightSideForm{
-    width: 40%;
-    float: right;
-    text-align: left;
-    margin-right: 40px;
-}
-.rightSideForm input{
-    width: 250px;
-}
-.rightSideForm label{
-    display: inline-block;
-    width: 40%;
-}
+
 select{
     width: 250px;
     outline: none;
@@ -109,32 +82,7 @@ select{
     border-width: 0 0 2px;
     border-color: #24243e;
 }
-#showResult{
-    width: 30px;
-    float: right;
-    height: 100px;
-    background-color: white;
-    position: relative;
-    color: #0f0c29;
-    margin-top: 40px;
-}
-#showResultCenter{
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-#showResult:hover{
-    cursor: pointer;
-    border-left: 2px solid white;
-    background-color: #302b63;
-    color: white;
-    border-radius: 2px;
-}
-#showResult:hover button{
-    background-color: #302b63;
-    color: white;
-}
+
 span{
     color: red;
 }
@@ -145,41 +93,39 @@ span{
     font-size: 20px;
     font-weight: bold;
     transition: all 0.5s;
+    box-shadow: 0 1px 1px rgb(0, 37, 17,0.075) inset, 0 0 8px rgb(47, 187, 110,0.5);
+    outline: 0 none;
 }
 #submitBtn:hover{
-    background-color: #24243e;
+    background-color: #2BAE66FF;
     color: white;
     border-radius: 8px;
     width: 200px;
     border-width: 0 0 2px;
     border-color: white;
 }
-.suscribe{
-    clear: both;
-    width: 100%;
-    margin-bottom: 50px;
+.radio{
+    float: left;
 }
-.recordTable{
-    position: fixed;
-    width: 98%;
-    height: 600px;
-    border: 3px solid #f1f1f1;
-    z-index: 3;
-    margin: 0 auto;
-    border-radius: 10px;
-    top: 70px;
-    background-color: whitesmoke;
-}
-.recordTable table{
-    margin: 0 auto;
-    width: 100%;
-    background-color: white;
+.radioValue{
+    float: right;
+    margin-right: 300px;
 }
 
-.tableData{
-    border: 2px solid #0f0c29;
-    border-collapse: collapse;   
+.rightSide{
+    text-align: left;
+    display: block;
+    margin: auto;
+    box-shadow: 0 1px 1px rgb(0, 37, 17,0.075) inset, 0 0 8px rgb(47, 187, 110,0.5);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 0px 10px 0px;
+    
 }
+.table{
+    width: 500px !important;
+    margin: auto;
+} 
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
@@ -192,31 +138,14 @@ tr{
 tr:nth-child(even) {
     background-color: #dddddd;
 }
-table tr:last-child td:first-child {
+table tr:first-child{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10p;
+}
+table tr:first-child td:first-child {
     border-bottom-left-radius: 10px;
 }
 
 table tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
-}
-.tableContainer{
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to right,#0f0c29,#302b63,#24243e);
-    background-repeat: no-repeat;
-    display: none;
-    text-align: center;
-}
-
-.tableContainer span{
-    text-align: right;
-    font-size: 50px;
-    color: white;
-    padding-right: 30px;
-    float: right;
-}
-.tableContainer span:hover{
-    font-size: 55px;
-    color: whitesmoke;
-    cursor: pointer;
 }

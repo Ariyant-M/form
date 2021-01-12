@@ -1,3 +1,9 @@
+
+var wid = $(".form-group").width();
+var len = $("#leftSide").outerHeight();
+console.log(`height ${len} , width ${wid}`);
+$("#rightSide").css("height", len + 30);
+/*
 function showAddedResult(){
 
     //get form data for validate form
@@ -271,3 +277,4 @@ function closeTable() {
     document.getElementById("mainForm").style.display = "block";
     document.getElementById("showResult").style.display = "block";
 }
+*/
