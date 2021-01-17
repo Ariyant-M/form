@@ -31,31 +31,37 @@
                     <div class="form-group">
                         <label for="firstName">First Name <span>*</span></label>
                         <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name"data-placement="right" data-trigger="manual" data-content="Must only contain letters and more the one character.">
+                        <span class="formError" id="fNameError"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="lastName">Last Name <span>*</span></label>
                         <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
+                        <span class="formError" id="lNameError"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email address <span>*</span></label>
                         <input type="email" class="form-control" name="email" id="email" placeholder="abc@exemple.com">
+                        <span class="formError" id="emailError"></span>
                     </div>
                     
                     <div class="form-group">
-                        <label for="pass">Password</label>
+                        <label for="pass">Password <span>*</span></label>
                         <input type="password" class="form-control" name="pass" id="pass">
-                        <small>length must be more then 5</small>
+                        <small>length must be more then 5, at least one letter, one number and one special character</small>
+                        <span class="formError" id="passError"></span>
                     </div>
 
                     <div class="form-group">
-                        <label for="conpass">Confirm Password</label>
+                        <label for="conpass">Confirm Password <span>*</span></label>
                         <input type="password" class="form-control" name="conpass" id="conpass">
+                        <span class="formError" id="conpassError"></span>
                     </div>
 
                     <div>
                         <label for="gender">Gender <span>*</span></label>
+                        <span class="formError" id="genderError"><br></span>
                         <br>
                         <div class="custom-control custom-radio custom-control-inline">
                             <input class="custom-control-input" type="radio" name="gender" id="male" value="male" checked>
@@ -81,26 +87,31 @@
                     <div class="form-group">
                         <label for="phone1">Phone Number(1)<span>*</span></label>
                         <input type="tel" class="form-control" name="phone1" id="phone1" pattern="[0-9]{10}" placeholder="9876543210">
+                        <span class="formError" id="phone1Error"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="phone2">Phone Number(2)</label>
                         <input type="tel" class="form-control" name="phone2" id="phone2" pattern="[0-9]{10}" placeholder="9876543210">
+                        <span class="formError" id="phone2Error"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="address">Address<span>*</span></label>
                         <input type="text" class="form-control" name="address1" id="address1">
+                        <span class="formError" id="addressError"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="city">City<span>*</span></label>
                         <input type="text" class="form-control" name="city" id="city">
+                        <span class="formError" id="cityError"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="zip">Zip<span>*</span></label>
                         <input type="text" class="form-control" name="zip" id="zip">
+                        <span class="formError" id="zipError"></span>
                     </div>
 
                     <div class="form-group">
@@ -108,6 +119,7 @@
                         <select class="custom-select" id="country" name ="country">
 
                         </select>
+                        <span class="formError" id="countryError"></span>
                     </div>
 
                     <div class="form-group">
@@ -115,6 +127,7 @@
                         <select class="custom-select" name ="state" id ="state">
 
                         </select>
+                        <span class="formError" id="stateError"></span>
                     </div>
 
                     <div class="form-group form-check">
